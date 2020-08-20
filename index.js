@@ -57,7 +57,7 @@ client.on('message', (message) => {
     let commandList = [
       {name: 'ping', desc: 'pong'},
       {name: '#help', desc: '봇의 대해 소개시켜줍니다'},
-      {name: 'embed2', desc: '명령어를 알려줍니다'},
+      {name: '#help2', desc: '명령어를 알려줍니다'},
       {name: '#DM', desc: 'DM공지(관리자권한들어가있는사람만 가능)'},
     ];
     let commandStr = '';
