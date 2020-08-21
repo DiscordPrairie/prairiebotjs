@@ -8,6 +8,7 @@ const byeChannelComment = "퇴장하셨습니다";
 
 client.on('ready', () => {
   console.log('켰다.');
+  client.user.setPresence({ game: { name: '!help를 쳐보세요.' }, status: 'online' })
 });
 
 client.on("guildMemberAdd", (member) => {
