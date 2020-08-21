@@ -59,6 +59,7 @@ client.on('message', (message) => {
       {name: '#help', desc: '봇의 대해 소개시켜줍니다'},
       {name: '#help2', desc: '명령어를 알려줍니다'},
       {name: '#DM', desc: 'DM공지(관리자권한들어가있는사람만 가능)'},
+      {name: '!청소 (1~100)', desc: '메세지를 대량 삭제할수있습니다'},
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
