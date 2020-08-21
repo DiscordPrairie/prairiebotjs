@@ -47,6 +47,7 @@ client.on('message', (message) => {
       .addField('https://www.youtube.com/channel/UC4O_wPMfPLpusyEk1I8_02A/videos?view_as=subscriber', '파이리님의 유튜브링크입니다 구독하시면 큰힘이 됩니다', true)
       .addField('https://discord.gg/rehngY6', '파이리님의 디코제작샵', true)
       .addField('https://discord.gg/RhANapM', '파이리님의 팬디스코드', true)
+      .addField('https://discord.gg/rRWjvje', '파이리님의 gta5핵대리샵', true)
       .addField('디스코드 서버제작강의 해드립니다', '무료로강의 해드립니다\n강의신청은 디코제작샵아니면\팬디스코드에서 신청가능합니다\n')
       .addBlankField()
       .setTimestamp()
