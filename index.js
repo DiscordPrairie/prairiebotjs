@@ -33,12 +33,12 @@ client.on('message', (message) => {
 
   if(message.content == 'ping') {
     return message.reply('pong');
-  }
+  } 
 
   if(message.content == '!si') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/737597103953543188/744914139931213884/1_25.png';
-    var duration = moment.duration(client.uptime).format(" 일 [일], 시 [시간], 분 [분], 초 [초]");
+    var duration = moment.duration(client.uptime).format(" D [일], H [시간], M [분], S [초]");
     embed.setColor('#186de6')
     embed.setAuthor('파이리봇 서버상태', img)
     embed.setFooter('개발자:파이리812#1482')
