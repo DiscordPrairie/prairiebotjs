@@ -1,8 +1,6 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const token = process.env.token
-const moment = require("moment");
-require("moment-duration-format");
 const welcomeChannelName = "🎉ㅣ안녕하세요";
 const byeChannelName = "🎉ㅣ안녕히가세요";
 const welcomeChannelComment = "저희서버에 오신걸 환영합니다";
