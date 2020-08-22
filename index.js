@@ -37,7 +37,7 @@ client.on('message', (message) => {
     return message.reply('pong');
   } 
 
-  if(message.content == '!si') {
+  if(message.content == '!server') {
     let embed = new Discord.RichEmbed()
     let img = 'https://cdn.discordapp.com/attachments/737597103953543188/744914139931213884/1_25.png';
     var duration = moment.duration(client.uptime).format(" D [일], H [시간], M [분], S [초]");
@@ -96,6 +96,7 @@ client.on('message', (message) => {
       {name: '#help2', desc: '명령어를 알려줍니다'},
       {name: '#DM', desc: 'DM공지(관리자권한들어가있는사람만 가능)'},
       {name: '!청소 (1~100)', desc: '메세지를 대량 삭제할수있습니다'},
+      {name: '!server', desc: '디스코드 서버상태 확인'},    
     ];
     let commandStr = '';
     let embed = new Discord.RichEmbed()
