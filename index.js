@@ -35,6 +35,38 @@ client.on('message', (message) => {
     return message.reply('pong');
   }
 
+  if(message.content == '!si') {
+    let embed = new Discord.RichEmbed()
+    let img = 'https://cdn.discordapp.com/attachments/737597103953543188/744914139931213884/1_25.png';
+    var duration = moment.duration(client.uptime).format(" 일 [일], 시 [시간], 분 [분], 초 [초]");
+    embed.setColor('#186de6')
+    embed.setAuthor('파이리봇 서버상태', img)
+    embed.setFooter('개발자:파이리812#1482')
+    embed.addBlankField()
+    embed.addField('RAM usage',    `${(process.memoryUsage().heapUsed / 1024 / 1024).toFixed(2)} MB`, true);
+    embed.addField('running time', `${duration}`, true);
+    embed.addField('user',         `${client.users.size.toLocaleString()}`, true);
+    embed.addField('server',       `${client.guilds.size.toLocaleString()}`, true);
+    // embed.addField('channel',      `${client.channels.size.toLocaleString()}`, true);
+    embed.addField('Discord.js',   `v${Discord.version}`, true);
+    embed.addField('Node',         `${process.version}`, true);
+    
+    let arr = client.guilds.array();
+    let list = '';
+    list = `\`\`\`css\n`;
+    
+    for(let i=0;i<arr.length;i++) {
+      // list += `${arr[i].name} - ${arr[i].id}\n`
+      list += `${arr[i].name}\n`
+    }
+    list += `\`\`\`\n`
+    embed.addField('list:',        `${list}`);
+
+    embed.setTimestamp()
+    message.channel.send(embed);
+  }
+
+
   if(message.content == '#help') {
     let img = 'https://cdn.discordapp.com/attachments/737597103953543188/744914139931213884/1_25.png';
     let embed = new Discord.RichEmbed()
